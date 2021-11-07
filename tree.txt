@@ -1,0 +1,618 @@
+
+├─docs
+│  └─templates
+├─examples
+├─gradle
+│  ├─spotless
+│  └─wrapper
+├─python
+│  └─scripts
+│      ├─generic-pytest
+│      ├─watcher
+│      └─wavsep
+├─snap
+│  └─snap
+│      └─gui
+└─zap
+    ├─build
+    │  ├─classes
+    │  │  └─java
+    │  │      ├─main
+    │  │      │  ├─ch
+    │  │      │  │  └─csnc
+    │  │      │  │      └─extension
+    │  │      │  │          ├─httpclient
+    │  │      │  │          ├─ui
+    │  │      │  │          └─util
+    │  │      │  └─org
+    │  │      │      ├─apache
+    │  │      │      │  └─commons
+    │  │      │      │      └─httpclient
+    │  │      │      │          └─protocol
+    │  │      │      ├─parosproxy
+    │  │      │      │  └─paros
+    │  │      │      │      ├─common
+    │  │      │      │      ├─control
+    │  │      │      │      ├─core
+    │  │      │      │      │  ├─proxy
+    │  │      │      │      │  └─scanner
+    │  │      │      │      ├─db
+    │  │      │      │      │  └─paros
+    │  │      │      │      ├─extension
+    │  │      │      │      │  ├─edit
+    │  │      │      │      │  ├─history
+    │  │      │      │      │  ├─manualrequest
+    │  │      │      │      │  │  └─http
+    │  │      │      │      │  │      └─impl
+    │  │      │      │      │  ├─option
+    │  │      │      │      │  └─state
+    │  │      │      │      ├─model
+    │  │      │      │      ├─network
+    │  │      │      │      ├─security
+    │  │      │      │      └─view
+    │  │      │      └─zaproxy
+    │  │      │          └─zap
+    │  │      │              ├─authentication
+    │  │      │              ├─common
+    │  │      │              ├─control
+    │  │      │              ├─core
+    │  │      │              │  └─scanner
+    │  │      │              ├─db
+    │  │      │              │  ├─paros
+    │  │      │              │  └─sql
+    │  │      │              ├─eventBus
+    │  │      │              ├─extension
+    │  │      │              │  ├─alert
+    │  │      │              │  ├─anticsrf
+    │  │      │              │  ├─api
+    │  │      │              │  ├─ascan
+    │  │      │              │  │  └─filters
+    │  │      │              │  │      └─impl
+    │  │      │              │  ├─authentication
+    │  │      │              │  ├─authorization
+    │  │      │              │  ├─autoupdate
+    │  │      │              │  ├─brk
+    │  │      │              │  │  └─impl
+    │  │      │              │  │      └─http
+    │  │      │              │  ├─callback
+    │  │      │              │  │  └─ui
+    │  │      │              │  ├─compare
+    │  │      │              │  ├─custompages
+    │  │      │              │  ├─dynssl
+    │  │      │              │  ├─ext
+    │  │      │              │  ├─forceduser
+    │  │      │              │  ├─globalexcludeurl
+    │  │      │              │  ├─help
+    │  │      │              │  ├─history
+    │  │      │              │  ├─httppanel
+    │  │      │              │  │  ├─component
+    │  │      │              │  │  │  ├─all
+    │  │      │              │  │  │  │  ├─request
+    │  │      │              │  │  │  │  └─response
+    │  │      │              │  │  │  └─split
+    │  │      │              │  │  │      ├─request
+    │  │      │              │  │  │      └─response
+    │  │      │              │  │  └─view
+    │  │      │              │  │      ├─hex
+    │  │      │              │  │      ├─image
+    │  │      │              │  │      ├─impl
+    │  │      │              │  │      │  └─models
+    │  │      │              │  │      │      └─http
+    │  │      │              │  │      │          ├─request
+    │  │      │              │  │      │          └─response
+    │  │      │              │  │      ├─largerequest
+    │  │      │              │  │      ├─largeresponse
+    │  │      │              │  │      ├─paramtable
+    │  │      │              │  │      │  └─addins
+    │  │      │              │  │      ├─posttable
+    │  │      │              │  │      ├─syntaxhighlight
+    │  │      │              │  │      │  ├─components
+    │  │      │              │  │      │  │  ├─all
+    │  │      │              │  │      │  │  │  ├─request
+    │  │      │              │  │      │  │  │  └─response
+    │  │      │              │  │      │  │  └─split
+    │  │      │              │  │      │  │      ├─request
+    │  │      │              │  │      │  │      └─response
+    │  │      │              │  │      │  ├─lexers
+    │  │      │              │  │      │  └─menus
+    │  │      │              │  │      ├─text
+    │  │      │              │  │      └─util
+    │  │      │              │  ├─httpsessions
+    │  │      │              │  ├─keyboard
+    │  │      │              │  ├─lang
+    │  │      │              │  ├─log4j
+    │  │      │              │  ├─option
+    │  │      │              │  ├─params
+    │  │      │              │  ├─proxies
+    │  │      │              │  ├─pscan
+    │  │      │              │  │  └─scanner
+    │  │      │              │  ├─ruleconfig
+    │  │      │              │  ├─script
+    │  │      │              │  ├─search
+    │  │      │              │  ├─sessions
+    │  │      │              │  ├─siterefresh
+    │  │      │              │  ├─spider
+    │  │      │              │  ├─stats
+    │  │      │              │  ├─stdmenus
+    │  │      │              │  ├─tab
+    │  │      │              │  ├─uiutils
+    │  │      │              │  └─users
+    │  │      │              ├─httputils
+    │  │      │              ├─model
+    │  │      │              ├─network
+    │  │      │              ├─scan
+    │  │      │              ├─session
+    │  │      │              ├─spider
+    │  │      │              │  ├─filters
+    │  │      │              │  └─parser
+    │  │      │              ├─users
+    │  │      │              ├─utils
+    │  │      │              └─view
+    │  │      │                  ├─messagecontainer
+    │  │      │                  │  └─http
+    │  │      │                  ├─messagelocation
+    │  │      │                  │  └─http
+    │  │      │                  ├─panels
+    │  │      │                  ├─panelsearch
+    │  │      │                  │  └─items
+    │  │      │                  ├─popup
+    │  │      │                  ├─renderer
+    │  │      │                  ├─table
+    │  │      │                  │  └─decorator
+    │  │      │                  └─widgets
+    │  │      ├─test
+    │  │      │  ├─ch
+    │  │      │  │  └─csnc
+    │  │      │  │      └─extension
+    │  │      │  │          ├─httpclient
+    │  │      │  │          └─util
+    │  │      │  └─org
+    │  │      │      ├─apache
+    │  │      │      │  └─commons
+    │  │      │      │      └─httpclient
+    │  │      │      ├─parosproxy
+    │  │      │      │  └─paros
+    │  │      │      │      ├─common
+    │  │      │      │      ├─core
+    │  │      │      │      │  ├─proxy
+    │  │      │      │      │  └─scanner
+    │  │      │      │      ├─extension
+    │  │      │      │      ├─model
+    │  │      │      │      └─network
+    │  │      │      └─zaproxy
+    │  │      │          └─zap
+    │  │      │              ├─authentication
+    │  │      │              ├─control
+    │  │      │              ├─eventBus
+    │  │      │              ├─extension
+    │  │      │              │  ├─alert
+    │  │      │              │  ├─anticsrf
+    │  │      │              │  ├─api
+    │  │      │              │  ├─ascan
+    │  │      │              │  │  └─filters
+    │  │      │              │  │      └─impl
+    │  │      │              │  ├─authentication
+    │  │      │              │  ├─authorization
+    │  │      │              │  ├─autoupdate
+    │  │      │              │  ├─brk
+    │  │      │              │  │  └─impl
+    │  │      │              │  │      └─http
+    │  │      │              │  ├─custompages
+    │  │      │              │  ├─dynssl
+    │  │      │              │  ├─ext
+    │  │      │              │  ├─forceduser
+    │  │      │              │  ├─httppanel
+    │  │      │              │  │  └─view
+    │  │      │              │  │      ├─hex
+    │  │      │              │  │      ├─impl
+    │  │      │              │  │      │  └─models
+    │  │      │              │  │      │      └─http
+    │  │      │              │  │      │          ├─request
+    │  │      │              │  │      │          └─response
+    │  │      │              │  │      ├─syntaxhighlight
+    │  │      │              │  │      │  └─lexers
+    │  │      │              │  │      └─util
+    │  │      │              │  ├─lang
+    │  │      │              │  ├─log4j
+    │  │      │              │  ├─pscan
+    │  │      │              │  │  └─scanner
+    │  │      │              │  ├─ruleconfig
+    │  │      │              │  ├─script
+    │  │      │              │  ├─sessions
+    │  │      │              │  └─stdmenus
+    │  │      │              ├─model
+    │  │      │              ├─network
+    │  │      │              ├─resources
+    │  │      │              ├─spider
+    │  │      │              │  ├─filters
+    │  │      │              │  └─parser
+    │  │      │              ├─testutils
+    │  │      │              ├─users
+    │  │      │              ├─utils
+    │  │      │              └─view
+    │  │      │                  ├─panelsearch
+    │  │      │                  ├─table
+    │  │      │                  └─widgets
+    │  │      └─testGui
+    │  │          └─org
+    │  │              └─zaproxy
+    │  │                  ├─testutils
+    │  │                  └─zap
+    │  │                      └─extension
+    │  │                          └─httppanel
+    │  │                              └─component
+    │  ├─distFiles
+    │  │  ├─db
+    │  │  ├─lang
+    │  │  ├─lib
+    │  │  ├─license
+    │  │  ├─plugin
+    │  │  ├─scripts
+    │  │  │  └─templates
+    │  │  │      ├─active
+    │  │  │      ├─authentication
+    │  │  │      ├─httpsender
+    │  │  │      ├─passive
+    │  │  │      ├─proxy
+    │  │  │      ├─session
+    │  │  │      ├─standalone
+    │  │  │      ├─targeted
+    │  │  │      └─variant
+    │  │  └─xml
+    │  ├─distributions
+    │  ├─generated
+    │  │  └─sources
+    │  │      ├─annotationProcessor
+    │  │      │  └─java
+    │  │      │      ├─main
+    │  │      │      ├─test
+    │  │      │      └─testGui
+    │  │      └─headers
+    │  │          └─java
+    │  │              ├─main
+    │  │              ├─test
+    │  │              └─testGui
+    │  ├─jacoco
+    │  ├─libs
+    │  ├─reports
+    │  │  ├─japicmp
+    │  │  └─tests
+    │  │      └─test
+    │  │          ├─classes
+    │  │          ├─css
+    │  │          ├─js
+    │  │          └─packages
+    │  ├─resources
+    │  │  ├─main
+    │  │  │  ├─org
+    │  │  │  │  └─zaproxy
+    │  │  │  │      └─zap
+    │  │  │  │          └─resources
+    │  │  │  │              └─xml
+    │  │  │  └─resource
+    │  │  │      └─icon
+    │  │  │          ├─10
+    │  │  │          ├─16
+    │  │  │          ├─20
+    │  │  │          ├─breakTypes
+    │  │  │          └─fugue
+    │  │  └─test
+    │  │      ├─ch
+    │  │      │  └─csnc
+    │  │      │      └─extension
+    │  │      │          └─util
+    │  │      ├─org
+    │  │      │  └─zaproxy
+    │  │      │      └─zap
+    │  │      │          ├─control
+    │  │      │          ├─spider
+    │  │      │          │  └─parser
+    │  │      │          │      ├─html
+    │  │      │          │      ├─htmlform
+    │  │      │          │      └─sitemapxml
+    │  │      │          └─utils
+    │  │      └─vulnerabilities
+    │  │          └─invalid
+    │  ├─spotless
+    │  │  ├─spotlessJava
+    │  │  ├─spotlessKotlinGradle
+    │  │  └─spotlessLicense
+    │  ├─test-results
+    │  │  └─test
+    │  │      └─binary
+    │  └─tmp
+    │      ├─jar
+    │      └─jarDaily
+    ├─gradle
+    └─src
+        ├─main
+        │  ├─debian
+        │  ├─dist
+        │  │  ├─db
+        │  │  ├─lang
+        │  │  ├─license
+        │  │  ├─plugin
+        │  │  ├─scripts
+        │  │  │  └─templates
+        │  │  │      ├─active
+        │  │  │      ├─authentication
+        │  │  │      ├─httpsender
+        │  │  │      ├─passive
+        │  │  │      ├─proxy
+        │  │  │      ├─session
+        │  │  │      ├─standalone
+        │  │  │      ├─targeted
+        │  │  │      └─variant
+        │  │  └─xml
+        │  ├─flex
+        │  │  └─org
+        │  │      └─zaproxy
+        │  │          └─zap
+        │  │              └─extension
+        │  │                  └─httppanel
+        │  │                      └─view
+        │  │                          └─syntaxhighlight
+        │  │                              └─lexers
+        │  ├─installer
+        │  │  └─resources
+        │  ├─java
+        │  │  ├─ch
+        │  │  │  └─csnc
+        │  │  │      └─extension
+        │  │  │          ├─httpclient
+        │  │  │          ├─ui
+        │  │  │          └─util
+        │  │  └─org
+        │  │      ├─apache
+        │  │      │  └─commons
+        │  │      │      └─httpclient
+        │  │      │          └─protocol
+        │  │      ├─parosproxy
+        │  │      │  └─paros
+        │  │      │      ├─common
+        │  │      │      ├─control
+        │  │      │      ├─core
+        │  │      │      │  ├─proxy
+        │  │      │      │  └─scanner
+        │  │      │      ├─db
+        │  │      │      │  └─paros
+        │  │      │      ├─extension
+        │  │      │      │  ├─edit
+        │  │      │      │  ├─history
+        │  │      │      │  ├─manualrequest
+        │  │      │      │  │  └─http
+        │  │      │      │  │      └─impl
+        │  │      │      │  ├─option
+        │  │      │      │  └─state
+        │  │      │      ├─model
+        │  │      │      ├─network
+        │  │      │      ├─security
+        │  │      │      └─view
+        │  │      └─zaproxy
+        │  │          └─zap
+        │  │              ├─authentication
+        │  │              ├─common
+        │  │              ├─control
+        │  │              ├─core
+        │  │              │  └─scanner
+        │  │              ├─db
+        │  │              │  ├─paros
+        │  │              │  └─sql
+        │  │              ├─eventBus
+        │  │              ├─extension
+        │  │              │  ├─alert
+        │  │              │  ├─anticsrf
+        │  │              │  ├─api
+        │  │              │  ├─ascan
+        │  │              │  │  └─filters
+        │  │              │  │      └─impl
+        │  │              │  ├─authentication
+        │  │              │  ├─authorization
+        │  │              │  ├─autoupdate
+        │  │              │  ├─brk
+        │  │              │  │  └─impl
+        │  │              │  │      └─http
+        │  │              │  ├─callback
+        │  │              │  │  └─ui
+        │  │              │  ├─compare
+        │  │              │  ├─custompages
+        │  │              │  ├─dynssl
+        │  │              │  ├─ext
+        │  │              │  ├─forceduser
+        │  │              │  ├─globalexcludeurl
+        │  │              │  ├─help
+        │  │              │  ├─history
+        │  │              │  ├─httppanel
+        │  │              │  │  ├─component
+        │  │              │  │  │  ├─all
+        │  │              │  │  │  │  ├─request
+        │  │              │  │  │  │  └─response
+        │  │              │  │  │  └─split
+        │  │              │  │  │      ├─request
+        │  │              │  │  │      └─response
+        │  │              │  │  └─view
+        │  │              │  │      ├─hex
+        │  │              │  │      ├─image
+        │  │              │  │      ├─impl
+        │  │              │  │      │  └─models
+        │  │              │  │      │      └─http
+        │  │              │  │      │          ├─request
+        │  │              │  │      │          └─response
+        │  │              │  │      ├─largerequest
+        │  │              │  │      ├─largeresponse
+        │  │              │  │      ├─paramtable
+        │  │              │  │      │  └─addins
+        │  │              │  │      ├─posttable
+        │  │              │  │      ├─syntaxhighlight
+        │  │              │  │      │  ├─components
+        │  │              │  │      │  │  ├─all
+        │  │              │  │      │  │  │  ├─request
+        │  │              │  │      │  │  │  └─response
+        │  │              │  │      │  │  └─split
+        │  │              │  │      │  │      ├─request
+        │  │              │  │      │  │      └─response
+        │  │              │  │      │  ├─lexers
+        │  │              │  │      │  └─menus
+        │  │              │  │      ├─text
+        │  │              │  │      └─util
+        │  │              │  ├─httpsessions
+        │  │              │  ├─keyboard
+        │  │              │  ├─lang
+        │  │              │  ├─log4j
+        │  │              │  ├─option
+        │  │              │  ├─params
+        │  │              │  ├─proxies
+        │  │              │  ├─pscan
+        │  │              │  │  └─scanner
+        │  │              │  ├─ruleconfig
+        │  │              │  ├─script
+        │  │              │  ├─search
+        │  │              │  ├─sessions
+        │  │              │  ├─siterefresh
+        │  │              │  ├─spider
+        │  │              │  ├─stats
+        │  │              │  ├─stdmenus
+        │  │              │  ├─tab
+        │  │              │  ├─uiutils
+        │  │              │  └─users
+        │  │              ├─httputils
+        │  │              ├─model
+        │  │              ├─network
+        │  │              ├─scan
+        │  │              ├─session
+        │  │              ├─spider
+        │  │              │  ├─filters
+        │  │              │  └─parser
+        │  │              ├─users
+        │  │              ├─utils
+        │  │              └─view
+        │  │                  ├─messagecontainer
+        │  │                  │  └─http
+        │  │                  ├─messagelocation
+        │  │                  │  └─http
+        │  │                  ├─panels
+        │  │                  ├─panelsearch
+        │  │                  │  └─items
+        │  │                  ├─popup
+        │  │                  ├─renderer
+        │  │                  ├─table
+        │  │                  │  └─decorator
+        │  │                  └─widgets
+        │  ├─macOS
+        │  │  └─OWASP ZAP.app
+        │  │      └─Contents
+        │  │          └─MacOS
+        │  └─resources
+        │      ├─org
+        │      │  └─zaproxy
+        │      │      └─zap
+        │      │          └─resources
+        │      │              └─xml
+        │      └─resource
+        │          └─icon
+        │              ├─10
+        │              ├─16
+        │              ├─20
+        │              ├─breakTypes
+        │              └─fugue
+        ├─test
+        │  ├─java
+        │  │  ├─ch
+        │  │  │  └─csnc
+        │  │  │      └─extension
+        │  │  │          ├─httpclient
+        │  │  │          └─util
+        │  │  └─org
+        │  │      ├─apache
+        │  │      │  └─commons
+        │  │      │      └─httpclient
+        │  │      ├─parosproxy
+        │  │      │  └─paros
+        │  │      │      ├─common
+        │  │      │      ├─core
+        │  │      │      │  ├─proxy
+        │  │      │      │  └─scanner
+        │  │      │      ├─extension
+        │  │      │      ├─model
+        │  │      │      └─network
+        │  │      └─zaproxy
+        │  │          └─zap
+        │  │              ├─authentication
+        │  │              ├─control
+        │  │              ├─eventBus
+        │  │              ├─extension
+        │  │              │  ├─alert
+        │  │              │  ├─anticsrf
+        │  │              │  ├─api
+        │  │              │  ├─ascan
+        │  │              │  │  └─filters
+        │  │              │  │      └─impl
+        │  │              │  ├─authentication
+        │  │              │  ├─authorization
+        │  │              │  ├─autoupdate
+        │  │              │  ├─brk
+        │  │              │  │  └─impl
+        │  │              │  │      └─http
+        │  │              │  ├─custompages
+        │  │              │  ├─dynssl
+        │  │              │  ├─ext
+        │  │              │  ├─forceduser
+        │  │              │  ├─httppanel
+        │  │              │  │  └─view
+        │  │              │  │      ├─hex
+        │  │              │  │      ├─impl
+        │  │              │  │      │  └─models
+        │  │              │  │      │      └─http
+        │  │              │  │      │          ├─request
+        │  │              │  │      │          └─response
+        │  │              │  │      ├─syntaxhighlight
+        │  │              │  │      │  └─lexers
+        │  │              │  │      └─util
+        │  │              │  ├─lang
+        │  │              │  ├─log4j
+        │  │              │  ├─pscan
+        │  │              │  │  └─scanner
+        │  │              │  ├─ruleconfig
+        │  │              │  ├─script
+        │  │              │  ├─sessions
+        │  │              │  └─stdmenus
+        │  │              ├─model
+        │  │              ├─network
+        │  │              ├─resources
+        │  │              ├─spider
+        │  │              │  ├─filters
+        │  │              │  └─parser
+        │  │              ├─testutils
+        │  │              ├─users
+        │  │              ├─utils
+        │  │              └─view
+        │  │                  ├─panelsearch
+        │  │                  ├─table
+        │  │                  └─widgets
+        │  └─resources
+        │      ├─ch
+        │      │  └─csnc
+        │      │      └─extension
+        │      │          └─util
+        │      ├─org
+        │      │  └─zaproxy
+        │      │      └─zap
+        │      │          ├─control
+        │      │          ├─spider
+        │      │          │  └─parser
+        │      │          │      ├─html
+        │      │          │      ├─htmlform
+        │      │          │      └─sitemapxml
+        │      │          └─utils
+        │      └─vulnerabilities
+        │          └─invalid
+        └─testGui
+            └─java
+                └─org
+                    └─zaproxy
+                        ├─testutils
+                        └─zap
+                            └─extension
+                                └─httppanel
+                                    └─component
+
